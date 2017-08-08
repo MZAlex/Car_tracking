@@ -1,0 +1,12 @@
+{% if objects %}
+    <h1>My reservations</h1>
+    <ul>
+    {% for elem in objects %}
+        <p> {{ elem.starting_point }} -> {{ elem.arrival_point }},</p>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No reservations are available.</p>
+{% endif %}
+<p>Go back to your <a href="/accounts/profile/">profile</a>, {{user}}</p>
+<p>Or to the <a href="/">index</a></p>
